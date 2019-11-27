@@ -6,8 +6,8 @@ This software is public domain.
 
 ### Basic Example
 
-```bash
-python fj.py <<EOF 
+```
+python fj.py <<EOF
 [
   {
     "hello": 5,
@@ -34,9 +34,9 @@ Outputs:
 
 ### Advanced Example
 
-```bash
-# if you want to use '=' instead of 🍺  you will want to do: -v==
-python3 fj.py -n -p '>' -v🍺 <<EOF
+```
+# note: if you want to use '=' instead of 🍺  you will want to do: -v==
+python3 fj.py -l '{' -r '}' -n -p '>' -v🍺 <<EOF
 {
   "hello": 5,
   "zap": {
@@ -51,11 +51,10 @@ EOF
 Outputs:
 
 ```
+hello🍺5
 nothing🍺
-hello🍺 5
-zap>limb>thing🍺 10
-zap>blast>[1]🍺 13
-zap>blast>[2]🍺
-zap>blast>[0]>terminal🍺 5
+zap>blast>{1}🍺13
+zap>blast>{2}🍺
+zap>blast>{0}>terminal🍺5
+zap>limb>thing🍺10
 ```
-
